@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    --primary-clr-100:hsl(185, 75%, 39%);
+    --primary-clr-200:hsl(229, 23%, 23%);
+    --primary-clr-300:hsl(227, 10%, 46%);
+    --primary-clr-400:hsl(0, 0%, 59%);
+    --ff-base:'Kumbh Sans', sans-serif;
+    --fs-base:18px;
+    --main-radius:12px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: var(--fs-base);
+}
+body{
+    background-color: var(--primary-clr-100);
+    font-family: var(--ff-base);
+}
+section{
+    min-height: 100vh;
+    background: url(images/bg-pattern-top.svg) left top no-repeat, url(images/bg-pattern-bottom.svg) right bottom no-repeat;
+    background-size: 900px, 850px;
+    background-position-y: -350px, 350px;
+    background-position-x: -100px, 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.card-container{
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.card-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--primary-clr-400);
+        >p{
+            color: var(--primary-clr-400);
+            font-size: .9rem;
+        }
+}
+.name{
+    font-weight: 700;
+    color: var(--primary-clr-200);
+}
+.age{
+    color: var(--primary-clr-400);
+    font-weight: 400;
+}
+.avatar{
+    position: absolute;
+    top: -70px;
+    left: 115px;
+    width: 120px;
+    height: 120px;
+    border: 5px solid white;
+    border-radius: 100%;
+}
+.card-stats{
+    font-weight: 700;
+    padding-top: 1.5rem;
+        >ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            >li{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                >span{
+                    color: var(--primary-clr-400);
+                    font-size: .75rem;
+                    font-weight: 400;
+                    letter-spacing: .1rem;
+                }
+            }
+        }
+}
+@media only screen and (max-width:500px){
+    section{
+        background-size: 700px, 700px;
+        background-position-x:-400px,170px ;
+        background-position-y:-350px,450px ;
+    }
+}
